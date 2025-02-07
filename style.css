@@ -3,13 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-.container {
-  display: flex;
-}
+
 .sidebar {
+  position: fixed;
   display: flex;
   flex-direction: column;
   background-color: black;
+  width: 280px;
   height: 100vh;
   padding: 30px;
   flex-grow: 1;
@@ -97,7 +97,7 @@
   color: #ff2288;
 }
 .main-content {
-  flex-grow: 9;
+  margin-left: 250px;
 }
 .header {
   margin: 0 auto;
@@ -135,7 +135,10 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
 }
-.main-navigation a {
+.gopro-button {
+  text-decoration: none;
+}
+.upload-button {
   text-decoration: none;
   color: white;
   background-color: #ff2288;
@@ -189,10 +192,77 @@
   flex-direction: column;
   align-items: center;
 }
+.hover-save {
+  position: absolute;
+  background-color: white;
+  width: 30px;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 10px;
+  opacity: 0%;
+}
+.box-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.boxes-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 85%;
+  margin: 0 auto;
+  gap: 15px;
+}
+.boxes-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 85%;
+  margin: 0 auto;
+  gap: 15px;
+}
+.hover-heart {
+  position: absolute;
+  background-color: white;
+  width: 30px;
+  padding: 5px;
+  margin-top: 50px;
+  margin-left: 10px;
+  border-radius: 10px;
+  opacity: 0%;
+}
+.box:hover .hover-save {
+  opacity: 100%;
+}
+.hover-save:hover {
+  transform: translateY(-3px);
+}
+.hover-heart:hover {
+  transform: translateY(-3px);
+}
+.box:hover .hover-heart {
+  opacity: 100%;
+}
+.box-cover-img {
+  border-radius: 20px;
+  width: 100%;
+}
+.box {
+  transition: all 0.3s ease;
+  border-radius: 20px;
+}
+.box p {
+  padding: 10px;
+}
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2);
+}
 .load-button {
   margin: 0 auto;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .load-button a {
   text-decoration: none;
@@ -203,4 +273,112 @@
   padding-right: 70px;
   background-color: rgb(218, 217, 217);
   border-radius: 15px;
+}
+.designers-container {
+  margin-top: 70px;
+  width: 100%;
+  background-color: #fafafa;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+.designer-header {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+}
+.designer-header-title {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 200;
+  font-size: 25px;
+}
+.viwe-all-button {
+  text-decoration: none;
+  color: #898686;
+  font-size: 15px;
+}
+.designer-avatar-box-container {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 13px;
+  margin-top: 50px;
+}
+.designers {
+  max-width: 200px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 5px;
+  padding: 5px;
+  font-size: 15px;
+}
+.designer-city {
+  font-size: 12px;
+  color: rgb(134, 132, 132);
+}
+.designers img {
+  width: 80%;
+}
+.follow {
+  text-decoration: none;
+  color: black;
+  background-color: rgb(231, 231, 231);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+}
+.linked-pages {
+  width: 100%;
+  padding-top: 60px;
+  padding-left: 100px;
+}
+.for-designers {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.for-designers h4 {
+  color: #a1a0a0;
+  font-weight: 100;
+}
+.list li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.list li,
+a {
+  text-decoration: none;
+  color: #a1a0a0;
+}
+.linked-pages {
+  display: flex;
+  justify-content: flex-start;
+  gap: 100px;
+  margin-bottom: 40px;
+}
+footer {
+  border-top: rgb(225, 222, 222) 1px solid;
+  width: 96%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-icons {
+  margin-left: 320px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  display: flex;
+  gap: 15px;
+}
+.signature {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.signature b {
+  font-weight: bolder;
 }
